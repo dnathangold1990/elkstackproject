@@ -100,4 +100,5 @@ _TODO: Answer the following questions to fill in the blanks:_
 - To run the playbook on the webservers, edit the "hosts" file under /etc/ansible/hosts to include the private IP address of each web server, after first editing the filebeat-config.yml file to include the IP of the ELK SERVER. Then you will run the install_elk.yml playbook found under /etc/ansible/elk_install.yml to install on all three webservers. To then install Filebeat on the webservers, run the filebeat-playbook.yml, after secure copying the filebeat-7.6.1-amd64.deb file to Web-1/2/3 (#EXAMPLE: scp filebeat-7.6.1-amd64.deb file to Web-1/2/3 sysadmin@10.0.0.5:~).
 - Navigate to http://20.83.164.196:5601/app/kibana then select add log data, select system logs, then navigate to the bottom and select "check data" to the right of item 5 "Module status". If the operation is successful, it will read "Data is successfully recieved from this module".
 
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+Command to edit filebeat-config.yml - sudo nano /etc/filebeat/filebeat.config.yml
+Command to run Ansible playbook for Filebeat Installation: ansible-playbook /etc/ansible/roles/filebeat-playbook.yml
